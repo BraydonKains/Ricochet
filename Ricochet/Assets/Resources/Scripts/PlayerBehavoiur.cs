@@ -59,7 +59,6 @@ public class PlayerBehavoiur : MonoBehaviour {
             if(air)
             {
                 air = false;
-                jumps = 2;
             }
         }
     }
