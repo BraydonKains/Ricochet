@@ -20,7 +20,7 @@ public class PlayerBehavoiur : MonoBehaviour {
 
     void Jump()
     {
-        float horizontalVelocity = Input.GetAxis(HorizontalAxis) * HorizontalScale;
+        float horizontalVelocity = Input.GetAxisRaw(HorizontalAxis) * HorizontalScale;
         rb.velocity = new Vector2(horizontalVelocity, 0);
         rb.velocity = new Vector2(horizontalVelocity, 7);
         air = true;
@@ -41,7 +41,7 @@ public class PlayerBehavoiur : MonoBehaviour {
 	void Update () {
         if(!air)
         {
-            MoveX(Input.GetAxis(HorizontalAxis));
+            MoveX(Input.GetAxisRaw(HorizontalAxis));
             if (Input.GetAxis(JumpAxis) == 1) Jump();
         }
         else
