@@ -66,10 +66,9 @@ public class PlayerBehavoiur : MonoBehaviour {
 
     void OnCollisionStay2D(Collision2D col)
     {
-        if(col.gameObject.name == "Wall" && Input.GetAxis(JumpAxis) == 1 && air && jumps>0)
+        if(col.gameObject.name == "Wall" && Input.GetAxis(JumpAxis) == 1 && air)
         {
             rb.velocity = new Vector2(-rb.velocity.x, rb.velocity.y+2);
-            jumps--;
         }
     }
 }
