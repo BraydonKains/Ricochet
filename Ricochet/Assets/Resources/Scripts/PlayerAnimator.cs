@@ -12,8 +12,8 @@ public class PlayerAnimator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        float ha = Input.GetAxis("Horizontal");
-        float va = Input.GetAxis("Vertical");
+        float ha = Input.GetAxisRaw("Horizontal");
+        float va = Input.GetAxisRaw("Vertical");
 
         if (ha > 0)
         {
